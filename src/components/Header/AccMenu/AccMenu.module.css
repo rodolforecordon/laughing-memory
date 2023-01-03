@@ -1,0 +1,27 @@
+menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: block;
+  position: absolute;
+  background-color: pink;
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-width: 160px;
+
+  top: 3rem;
+  right: -.1rem;
+}
+
+li {
+  padding: 1rem;
+  border-bottom: 1px solid lightpink;
+  font-size: 1.5rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}
