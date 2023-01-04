@@ -13,7 +13,7 @@ const Header = () => {
         <div onClick={handleMenuVis}>
           <MdAccountCircle color="white" size="40px" />
         </div>
-        {menuVis && <AccMenu />}
+        {menuVis && <AccMenu changeVis={handleMenuVis} />}
       </nav>
     </header>
   );

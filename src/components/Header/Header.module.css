@@ -3,7 +3,7 @@ header {
   align-items: center;
   justify-content: center;
 
-  background: pink;
+  background: rgb(255, 192, 203);
   width: 100%;
   box-shadow: 0 0 10px 1px rgb(0, 0, 0, .5);
 }
