@@ -1,18 +1,22 @@
 import { Link } from 'react-router-dom';
 import './AccMenu.module.css';
 
-const AccMenu = () => {
+const accMenu = [
+  { to: '/signin', label: 'Login' },
+  { to: '/settings', label: 'Settings' },
+  { to: '/logout', label: 'Logout' },
+];
+
+const AccMenu = ({ changeVis }) => {
   return (
     <menu>
-      <li>
-        <Link to="/signin">Login</Link>
-      </li>
-      <li>
-        <Link to="/settings">Settings</Link>
-      </li>
-      <li>
-        <Link to="/logout">Logout</Link>
-      </li>
+      {accMenu.map((li) => (
+        <li onClick={changeVis}>
+          <Link to={li.to} key={li.label}>
+            {li.label}
+          </Link>
+        </li>
+      ))}
     </menu>
   );
 };
