@@ -11,7 +11,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: space-between;
 
   width: 100%;
   height: 100%;

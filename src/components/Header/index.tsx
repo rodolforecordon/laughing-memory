@@ -1,23 +1,22 @@
 import { useState, useContext } from 'react';
-import { MdAccountCircle } from 'react-icons/md';
-import AccMenu from './AccMenu';
+import ReturnIcon from './NavIcons/ReturnIcon';
+import AccountIcon from './NavIcons/AccountIcon';
 import NavContext from '../../store/nav-context';
 import './Header.module.css';
 
 const Header = () => {
-  const ctx = useContext(NavContext);
-  console.log(ctx);
+  const { navBarColor } = useContext(NavContext);
 
-  const [menuVis, setMenuVis] = useState(false);
-  const handleMenuVis = () => setMenuVis(!menuVis);
+  const [leftIcon, setLeftIcon] = useState(<ReturnIcon />);
+  const [centerIcon, setCenterIcon] = useState(<span>center</span>);
+  const [rightIcon, setRightIcon] = useState(<AccountIcon />);
 
   return (
-    <header>
+    <header style={{ backgroundColor: navBarColor }}>
       <nav>
-        <div onClick={handleMenuVis}>
-          <MdAccountCircle color="white" size="40px" />
-        </div>
-        {menuVis && <AccMenu changeVis={handleMenuVis} />}
+        {true && leftIcon}
+        {true && centerIcon}
+        {true && rightIcon}
       </nav>
     </header>
   );

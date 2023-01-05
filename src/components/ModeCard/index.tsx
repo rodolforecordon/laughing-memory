@@ -1,18 +1,26 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import NavContext from '../../store/nav-context';
 import classes from './ModeCard.module.css';
 
-const ModeCard = ({
-  mode,
-  bgColor,
-  path,
-}: {
+interface IModeCard {
   mode: string;
   bgColor: string;
   path: string;
-}) => (
-  <div className={classes.memoCard} style={{ background: bgColor }}>
-    <Link to={path}>{mode}</Link>
-  </div>
-);
+}
+
+const ModeCard: React.FC<IModeCard> = ({ mode, bgColor, path }) => {
+  const { handleNavColor } = useContext(NavContext);
+
+  return (
+    <div
+      className={classes.memoCard}
+      style={{ backgroundColor: bgColor }}
+      onClick={(e) => handleNavColor(e)}
+    >
+      <Link to={path}>{mode}</Link>
+    </div>
+  );
+};
 
 export default ModeCard;

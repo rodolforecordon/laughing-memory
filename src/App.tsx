@@ -10,8 +10,12 @@ import './App.css';
 
 function App() {
   const [activeIcons, setActiveIcons] = useState(['Account']);
-  const handleNavIcons = (iconNames: string[]) =>
-    setActiveIcons([...iconNames]);
+  const [navBarColor, setNavBarColor] = useState('pink');
+
+  const handleNavIcons = (iconNames: string[]) => setActiveIcons([...iconNames]);
+  const handleNavColor = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (e.target.innerHTML.includes('Flash')) setNavBarColor('#14AE5C');
+  };
 
   return (
     <div className="App">
@@ -19,7 +23,8 @@ function App() {
         value={{
           activeIcons,
           handleNavIcons,
-          navBarColor: 'blue',
+          navBarColor,
+          handleNavColor,
         }}
       >
         <Header />
