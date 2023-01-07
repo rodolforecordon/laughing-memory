@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import NavContext from '../../store/nav-context';
+import NavContext from '../../contexts/NavContext';
 import classes from './ModeCard.module.css';
 
 interface IModeCard {

@@ -1,22 +1,17 @@
-import { useState, useContext } from 'react';
-import ReturnIcon from './NavIcons/ReturnIcon';
-import AccountIcon from './NavIcons/AccountIcon';
-import NavContext from '../../store/nav-context';
+import { useContext } from 'react';
+import NavContext from '../../contexts/NavContext';
 import './Header.module.css';
 
 const Header = () => {
-  const { navBarColor } = useContext(NavContext);
-
-  const [leftIcon, setLeftIcon] = useState(<ReturnIcon />);
-  const [centerIcon, setCenterIcon] = useState(<span>center</span>);
-  const [rightIcon, setRightIcon] = useState(<AccountIcon />);
+  const { navBarColor, navActiveIcons } = useContext(NavContext).navBarState;
 
   return (
     <header style={{ backgroundColor: navBarColor }}>
       <nav>
-        {true && leftIcon}
-        {true && centerIcon}
-        {true && rightIcon}
+        {navActiveIcons.map((navIcon, index) => {
+          if (!navIcon) return <div key={index}></div>;
+          return <div key={index}>{navIcon}</div>;
+        })}
       </nav>
     </header>
   );
