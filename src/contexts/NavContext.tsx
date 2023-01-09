@@ -19,7 +19,7 @@ export type IMemoModes = Mode[];
 interface NavContextType {
   memoModes: IMemoModes;
   navBarState: NavState;
-  handleNavColor: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  handleNavBarState: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
 interface NavContextProviderProps {
@@ -88,7 +88,7 @@ export const NavContextProvider = ({ children }: NavContextProviderProps) => {
     }
   );
 
-  const handleNavColor = (e: Event) => {
+  const handleNavBarState = (e: Event) => {
     const text = e.target as HTMLElement;
 
     // matching clicked element and memoMode to find its bgColor
@@ -107,7 +107,7 @@ export const NavContextProvider = ({ children }: NavContextProviderProps) => {
       value={{
         memoModes,
         navBarState,
-        handleNavColor,
+        handleNavBarState,
       }}
     >
       {children}

@@ -10,13 +10,13 @@ interface IModeCard {
 }
 
 const ModeCard: React.FC<IModeCard> = ({ mode, bgColor, path }) => {
-  const { handleNavColor } = useContext(NavContext);
+  const { handleNavBarState } = useContext(NavContext);
 
   return (
     <div
       className={classes.memoCard}
       style={{ backgroundColor: bgColor }}
-      onClick={(e) => handleNavColor(e)}
+      onClick={(e) => handleNavBarState(e)}
     >
       <Link to={path}>{mode}</Link>
     </div>

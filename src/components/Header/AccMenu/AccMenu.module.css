@@ -5,8 +5,8 @@ menu {
 
   display: block;
   position: absolute;
-  background-color: pink;
-  color: white;
+  background-color: white;
+  color: black;
   text-align: center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -18,7 +18,7 @@ menu {
 
 li {
   padding: 1rem;
-  border-bottom: 1px solid lightpink;
+  border-bottom: 1px solid #FFC7C2;
   font-size: 1.5rem;
   cursor: pointer;
 }

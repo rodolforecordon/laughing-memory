@@ -1,0 +1,14 @@
+.flashCardsMain {
+  display: flex;
+  flex-direction: column;
+}
+
+.controlButtons {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  gap: 1rem;
+
+  padding: 1rem 0;
+  height: 7rem;
+}
