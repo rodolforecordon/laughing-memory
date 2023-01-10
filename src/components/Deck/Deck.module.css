@@ -1,0 +1,21 @@
+.deckContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 2rem;
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  padding: 0 .5rem;
+  height: 3.5rem;
+
+  border: 1px solid rgb(0, 0, 0, .05);
+  box-shadow: 0 0 10px 1px rgb(0, 0, 0, .2);
+}
+
+.deckName {
+  width: 100%;
+  text-align: left;
+  color: #686868;
+  padding-left: .5rem;
+}

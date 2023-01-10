@@ -1,0 +1,8 @@
+.editContainer {
+  cursor: pointer;
+  transition: transform .1s;
+}
+
+.editContainer:active {
+  transform: scale(1.1);
+}

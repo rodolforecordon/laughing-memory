@@ -1,5 +1,6 @@
 import React, { ReactNode, useState, useReducer } from 'react';
 import AccountIcon from '../components/Header/NavIcons/AccountIcon';
+import AddIcon from '../components/Header/NavIcons/AddIcon';
 import EditIcon from '../components/Header/NavIcons/EditIcon';
 import ReturnIcon from '../components/Header/NavIcons/ReturnIcon';
 
@@ -45,9 +46,9 @@ export const NavContextProvider = ({ children }: NavContextProviderProps) => {
     },
     {
       mode: 'Choose/Create a Deck',
-      bgColor: '#FFC7C2',
+      bgColor: '#afafaf',
       path: '/decks',
-      navIcons: [<ReturnIcon />, null, null],
+      navIcons: [<ReturnIcon />, null, <AddIcon />],
     },
     {
       mode: 'Flash Cards',

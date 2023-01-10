@@ -1,0 +1,8 @@
+.moveContainer {
+  cursor: pointer;
+  transition: transform .1s;
+}
+
+.moveContainer:active {
+  transform: scale(1.15);
+}
