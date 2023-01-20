@@ -8,16 +8,17 @@
   width: 100%;
 }
 
-.searchContainer button {
+.searchContainer a {
+  all: unset;
+  background-color: #dadada;
   border: none;
   border-radius: 5px;
-  margin-top: .5rem;
   padding: .5rem 1rem;
   font-size: 2rem;
   cursor: pointer;
 }
 
-.searchContainer:active button {
+.searchContainer:active a {
   opacity: 50%;
 }
 
@@ -27,4 +28,10 @@
   justify-content: center;
   width: 100%;
   gap: 1rem;
+
+  margin-top: .5rem;
+}
+
+.searchInfo span {
+
 }

@@ -5,7 +5,11 @@ import EditIcon from '../components/Header/NavIcons/EditIcon';
 import ReturnIcon from '../components/Header/NavIcons/ReturnIcon';
 
 // TYPES DECLARATIONS
-type ActiveIcons = [ReactNode | null, ReactNode | null, ReactNode | null];
+type ActiveIcons = [
+  ReactNode | null,
+  ReactNode | null,
+  ReactNode | null
+];
 
 type Mode = {
   mode: string;
@@ -35,7 +39,9 @@ interface NavState {
 export const NavContext = React.createContext({} as NavContextType);
 
 // CREATE CONTEXT PROVIDER
-export const NavContextProvider = ({ children }: NavContextProviderProps) => {
+export const NavContextProvider = ({
+  children,
+}: NavContextProviderProps) => {
   const memoModes: IMemoModes = [
     {
       mode: 'Home',
