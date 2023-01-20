@@ -1,4 +1,4 @@
-import React, { ReactNode, useState, useReducer } from 'react';
+import React, { ReactNode, useReducer } from 'react';
 import AccountIcon from '../components/Header/NavIcons/AccountIcon';
 import AddIcon from '../components/Header/NavIcons/AddIcon';
 import EditIcon from '../components/Header/NavIcons/EditIcon';
@@ -6,7 +6,6 @@ import ReturnIcon from '../components/Header/NavIcons/ReturnIcon';
 
 // TYPES DECLARATIONS
 type ActiveIcons = [ReactNode | null, ReactNode | null, ReactNode | null];
-type Event = React.MouseEvent<HTMLDivElement, MouseEvent>;
 
 type Mode = {
   mode: string;
@@ -20,7 +19,7 @@ export type IMemoModes = Mode[];
 interface NavContextType {
   memoModes: IMemoModes;
   navBarState: NavState;
-  handleNavBarState: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  handleNavBarState: (modeName: string) => void;
 }
 
 interface NavContextProviderProps {
@@ -62,15 +61,18 @@ export const NavContextProvider = ({ children }: NavContextProviderProps) => {
       path: '/lettersout',
       navIcons: [<ReturnIcon />, null, <EditIcon />],
     },
+    {
+      mode: 'DeckEdition',
+      bgColor: '#afafaf',
+      path: '/deckedition',
+      navIcons: [<ReturnIcon />, null, null],
+    },
     //{ mode: 'Mode 3', bgColor: '#0D99FF', path: '/' },
     //{ mode: 'Mode 4', bgColor: '#FFCD29', path: '/' },
   ];
 
   const [navBarState, dispatchCurrentMode] = useReducer(
     (state: NavState, action: any) => {
-      console.log(state);
-      console.log(action);
-
       if (action.type === 'CHANGE_NAVBAR_COLOR') {
         return {
           ...state,
@@ -89,12 +91,9 @@ export const NavContextProvider = ({ children }: NavContextProviderProps) => {
     }
   );
 
-  const handleNavBarState = (e: Event) => {
-    const text = e.target as HTMLElement;
-
-    // matching clicked element and memoMode to find its bgColor
+  const handleNavBarState = (modeName: string) => {
     const mode: Mode | undefined = memoModes.filter((el) =>
-      el.mode.includes(text.innerHTML)
+      el.mode.includes(modeName)
     )[0];
 
     dispatchCurrentMode({

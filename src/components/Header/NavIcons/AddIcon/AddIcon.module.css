@@ -1,0 +1,8 @@
+.addIcon {
+  cursor: pointer;
+}
+
+.addIcon:active {
+  background-color: #c7c7c7;
+  border-radius: 50px;
+}

@@ -1,18 +1,26 @@
-import { useContext } from 'react';
-import ModeCard from '../../components/ModeCard';
+import { useContext, useEffect } from 'react';
 import { NavContext } from '../../contexts/NavContext';
-import './Home.module.css';
+import ModeCard from '../../components/Home/ModeCard';
+import classes from './Home.module.css';
+import DeckSearch from '../../components/Home/DeckSearch';
 
 const Home = () => {
-  const { memoModes } = useContext(NavContext);
+  const { memoModes, handleNavBarState } = useContext(NavContext);
+
+  useEffect(() => {
+    handleNavBarState('Home');
+  }, []);
 
   return (
     <section>
-      {memoModes
-        .filter(({ mode }) => mode !== 'Home')
-        .map((card) => (
-          <ModeCard {...card} key={card.mode} />
-        ))}
+      <DeckSearch />
+      <div className={classes.homeSection}>
+        {memoModes
+          .filter(({ mode }) => ['Flash Cards', 'Letters Out'].includes(mode))
+          .map((card) => (
+            <ModeCard {...card} key={card.mode} />
+          ))}
+      </div>
     </section>
   );
 };

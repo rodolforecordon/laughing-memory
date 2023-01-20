@@ -7,7 +7,7 @@ const AccountIcon = () => {
   const handleMenuVis = () => setMenuVis(!menuVis);
 
   return (
-    <div onClick={handleMenuVis}>
+    <div onClick={handleMenuVis} style={{ cursor: 'pointer' }}>
       <MdAccountCircle color="white" size="40px" />
       {menuVis && <AccMenu changeVis={handleMenuVis} />}
     </div>

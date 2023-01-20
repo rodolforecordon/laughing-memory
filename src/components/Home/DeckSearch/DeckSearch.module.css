@@ -1,0 +1,30 @@
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.searchContainer button {
+  border: none;
+  border-radius: 5px;
+  margin-top: .5rem;
+  padding: .5rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.searchContainer:active button {
+  opacity: 50%;
+}
+
+.searchInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}

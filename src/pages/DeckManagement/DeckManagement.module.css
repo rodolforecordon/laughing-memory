@@ -6,3 +6,9 @@
   width: 100%;
   text-align: center;
 }
+
+.decksMain > ul,
+.decksMain > ul > li {
+  all: unset;
+  padding-bottom: 1rem;
+}

@@ -1,0 +1,49 @@
+.createDeckForm {
+  margin: 0 auto;
+}
+
+.createDeckForm div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding-bottom: 1rem;
+}
+
+.createDeckForm input,
+.createDeckForm textarea {
+  font-size: 1.5rem;
+  padding: 4px 1rem;
+  margin-bottom: .5rem;
+  border: 3px solid rgb(0, 0, 0, .5);
+  border-radius: 5px;
+  max-width: 350px;
+  text-align: center;
+  width: 100%;
+}
+
+.createDeckForm textarea {
+  resize: none;
+}
+
+.createDeckForm label {
+  font-size: 1.5rem;
+}
+
+.createDeckForm button {
+  font-size: 1.7rem;
+  border: none;
+  width: 99%;
+  padding: .3rem;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0, .5);
+  color: white;
+  cursor: pointer;
+}
+
+.deckTitleInput {
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 3px solid rgb(0, 0, 0, .5) !important;
+}
