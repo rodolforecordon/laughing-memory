@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <NavContextProvider>
-        <DeckContextProvider>
-          <Header />
+        <Header />
 
+        <DeckContextProvider>
           <main>
             <Router />
           </main>

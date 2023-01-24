@@ -11,15 +11,11 @@ interface IDeck {
 const decks: IDeck[] = [
   {
     id: '001',
-    name: 'Deck 1',
+    name: 'Deck Test 1',
   },
   {
     id: '002',
-    name: 'Deck 2',
-  },
-  {
-    id: '003',
-    name: 'Deck 3',
+    name: 'Deck Test 2',
   },
 ];
 

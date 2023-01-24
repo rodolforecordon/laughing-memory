@@ -11,7 +11,7 @@ const DeckSearch = () => {
     <div className={classes.searchContainer}>
       <h1>Choose a Deck:</h1>
       <div className={classes.searchInfo}>
-        <span>{deck.name || 'Deck Name'}</span>
+        <span>{deck.name || ''}</span>
         <Link to="/decks">
           <SearchIcon />
         </Link>

@@ -25,3 +25,7 @@
   color: #686868;
   padding-left: .5rem;
 }
+
+.deckName:hover a {
+  font-weight: 600;
+}

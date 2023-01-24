@@ -5,11 +5,15 @@ interface IModeCard {
   mode: string;
   bgColor: string;
   path: string;
+  deckId: string;
 }
 
-const ModeCard: React.FC<IModeCard> = ({ mode, bgColor, path }) => {
+const ModeCard: React.FC<IModeCard> = ({ mode, bgColor, path, deckId }) => {
   return (
-    <div className={classes.memoCard} style={{ backgroundColor: bgColor }}>
+    <div
+      className={`${classes.memoCard} ${deckId ? '' : classes.active}`}
+      style={{ backgroundColor: bgColor }}
+    >
       <Link to={path}>{mode}</Link>
     </div>
   );

@@ -11,7 +11,7 @@ const Router = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/decks" element={<DeckManegement />} />
-      <Route path="/flashcards/:deckId" element={<FlashCards />} />
+      <Route path="/flashcards" element={<FlashCards />} />
       <Route path="/lettersout" element={<LettersOut />} />
       <Route path="/deckedition" element={<DeckEdition />} />
       <Route path="/deckedition/:deckId" element={<DeckEdition />} />
